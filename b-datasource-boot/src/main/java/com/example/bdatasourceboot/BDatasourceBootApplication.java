@@ -34,6 +34,28 @@ public class BDatasourceBootApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
         employeeJdbcClient.findAllEmployees()
                 .forEach(System.out::println);
+        System.out.println("EmployeeById::");
+        System.out.println(employeeJdbcClient.findEmployeeById(3)
+                .get());
+        System.out.println("Employee By FirstName and LastName:");
+        System.out.println(employeeJdbcClient.findEmployeeByFirstNameAndLastName(
+                "Thomas","Hardy"
+        ));
+        Employee employee=new Employee(
+                null,
+                "Thu Thu",
+                "Hnin Wai",
+                "thuthu@gmail.com",
+                "55-555-55",
+                Date.valueOf("2024-03-26"),
+                10000
+        );
+        //employeeJdbcClient.create(employee);
+//        employeeJdbcClient.updateEmployee(employee,7);
+//        System.out.println();
+        employeeJdbcClient.deleteById(5);
+        employeeJdbcClient.findAllEmployees()
+                .forEach(System.out::println);
 //        employeeDao.listEmails().forEach(System.out::println);
 //        System.out.println("List All Employees");
 //        employeeDao.listAllEmployees().forEach(System.out::println);

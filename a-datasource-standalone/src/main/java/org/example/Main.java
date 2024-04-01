@@ -2,7 +2,11 @@ package org.example;
 
 import org.example.dao.EmployeeDao;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+/*
+ACID
+1.reaad uncommited
 
+ */
 /*
 yyyy-MM-dd
 2024-03-25
