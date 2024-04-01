@@ -13,6 +13,7 @@
         <module>templatemethod-pattern</module>
         <module>builder-pattern</module>
         <module>string-calculator</module>
+        <module>spring-data-jpa-java-se</module>
     </modules>
 
     <properties>
